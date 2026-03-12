@@ -1,0 +1,61 @@
+body{
+background:#f4f4f4;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+font-family:Arial;
+}
+
+#game{
+width:600px;
+height:200px;
+border:2px solid black;
+position:relative;
+overflow:hidden;
+background:white;
+}
+
+.text{
+position:absolute;
+top:20px;
+}
+
+#dino{
+width:70px;
+height:70px;
+position:absolute;
+bottom:0;
+left:50px;
+}
+
+#dino img{
+width:100%;
+height:100%;
+image-rendering: pixelated;
+}
+
+#cactus{
+width:20px;
+height:40px;
+background:green;
+position:absolute;
+bottom:0;
+right:-20px;
+animation: moveCactus 2s linear infinite;
+}
+
+@keyframes moveCactus{
+0%{right:-20px;}
+100%{right:620px;}
+}
+
+.jump{
+animation: jump 0.5s linear;
+}
+
+@keyframes jump{
+0%{bottom:0;}
+50%{bottom:110px;}
+100%{bottom:0;}
+}
